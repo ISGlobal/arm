@@ -1,0 +1,79 @@
+*{
+  font-family:'Exo'
+}
+
+#popup{
+  background: #fff;
+  width:50vw;
+  font-size: 2.5vw;
+  display:none;
+  /*max-width:90%*/
+}
+#popup .fa{
+  font-size:2em;
+  /*font-size: 3vw;*/
+  color:#F39C1E;
+}
+#popup .fa:hover{
+  color:#008DAB;
+}
+#popup-screen{
+  background:#fff ;
+  opacity:.7
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:auto;
+}
+
+svg g#TEXTOS_EN{
+  display:none;
+}
+
+#hover{
+  cursor:pointer;
+}
+
+
+#pastilleta_entrada_1.animate{
+  transform-origin: 58.30078125px 175.521484375px;
+  animation: pastilleta_entrada_1 2s linear infinite;
+}
+
+@keyframes pastilleta_entrada_1 {
+  0%{
+    transform: translate(0px,0px);
+  }
+  50%{
+    transform: translate(10px,22.5px) rotate(30deg)
+  }
+  100%{
+    transform: translate(15px,45px) rotate(60deg)
+  }
+}
+
+
+#pastilleta_destruccion_1.animate{
+  transform-origin: 279.376953125px 121.099609375px;
+  animation: pastilleta_destruccion_1 2s linear infinite;
+}
+@keyframes pastilleta_destruccion_1 {
+  0%{
+    transform: translate(0px,0px);
+  }
+  50%{
+    transform: translate(-3px,25px) rotate(15deg)
+  }
+  100%{
+    transform: translate(-10px,50px) rotate(30deg)
+  }
+}
+
+#pastilleta_modificacion_1.animate{
+  transform-origin: 456.3984375px 121.099609375px;
+  animation: pastilleta_destruccion_1 2s linear infinite;
+}
