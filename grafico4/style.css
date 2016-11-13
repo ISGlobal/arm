@@ -1,0 +1,74 @@
+*{
+  font-family:'Exo'
+}
+
+#popup{
+  background: #fff;
+  width:50vw;
+  font-size: 2.5vw;
+  display:none;
+  /*max-width:90%*/
+}
+#popup .fa{
+  font-size:2em;
+  /*font-size: 3vw;*/
+  color:#F39C1E;
+}
+#popup .fa:hover{
+  color:#008DAB;
+}
+#popup-screen{
+  background:#fff ;
+  opacity:.7
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:auto;
+  cursor:pointer;
+}
+
+svg g#TEXTOS_EN{
+  display:none;
+}
+svg g#LETRERO_EN{
+  display:none;
+}
+
+#plasmido{
+  transform-origin:373px 155px;
+}
+#plasmido.animate{
+  animation: plasmido 2s linear infinite;
+}
+@keyframes plasmido {
+  0%{
+    transform: translate(0px,0px) rotate(0deg);
+  }
+
+  100%{
+    transform: translate(118px,1px) rotate(376deg);
+  }
+  /*100%{
+    transform: translate(0px,0px) rotate(0deg);
+  }*/
+}
+#pastilleta{
+  transform-origin: 194px;
+}
+#pastilleta.animate{
+
+  animation: pastilleta 2s linear infinite;
+}
+@keyframes pastilleta {
+  0%{
+
+    transform: translate(-30px,-156px) scale(4.01);
+  }
+  100%{
+    transform: translate(0,0) scale(1);
+  }
+}
