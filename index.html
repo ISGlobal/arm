@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ISGLOBAL</title>
+    <meta content="">
+    <style>
+      .view{
+        border:1px solid #bababa;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="./grafico2/index.html">ARMAS</a>
+      <br/>
+      <a href="./grafico2/index.html?lang=en">WEAPONS</a>
+    </p>
+    <p>
+      <a href="./grafico3/index.html">ICONOS</a>
+      <br/>
+      <a href="./grafico3/index.html?lang=en">ICONS</a>
+    </p>
+    <div>
+      <h2>IFRAMES</h2>
+      <div>
+        <label for="viewSize">Tamany:</label>
+        <select id="viewSize" name="viewSize">
+         <option value="360x640" selected>Galaxy S5 (360x640)</option>
+         <option value="411x731">Nexus 5X (411x731)</option>
+         <option value="375x667">Iphone 6 (375x667)</option>
+         <option value="768x1024">Ipad (768x1024)</option>
+       </select>
+       <br>
+       <input type="radio" name="orientation" value="vertical" > Vertical<br>
+       <input type="radio" name="orientation" value="horitzontal" checked> Horitzontal<br>
+      </div>
+      <h3>ARMAS (ES)</h3>
+      <div class="view" ><div style="position: relative;padding-bottom: 130%;padding-top: 25px; height: 0;"><iframe src="//datanpress.github.io/arm/grafico2/index.html" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div></div>
+      <h3>WEAPONS (EN)</h3>
+      <div class="view" ><div style="position: relative;padding-bottom: 130%;padding-top: 25px; height: 0;"><iframe src="//datanpress.github.io/arm/grafico2/index.html?lang=en" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div></div>
+
+      <h3>ICONOS (ES)</h3>
+      <div class="view" ><div style="position: relative;padding-bottom: 50%;padding-top: 25px; height: 0;"><iframe src="//datanpress.github.io/arm/grafico3/index.html" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div></div>
+      <h3>ICONS (EN)</h3>
+      <div class="view" ><div style="position: relative;padding-bottom: 50%;padding-top: 25px; height: 0;"><iframe src="//datanpress.github.io/arm/grafico3/index.html?lang=en" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div></div>
+
+      <!-- <div style="position: relative;padding-bottom: 64%;padding-top: 25px; height: 0;"><iframe src="http://datanpress.github.io/arm/./grafico2/index.html?lang=en" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"  integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="  crossorigin="anonymous"></script>
+    <script>
+    jQuery( document ).ready(function( $ ) {
+      var tamany = $( "#viewSize" ).val();
+      tamany = tamany.split('x');
+      var orientation = $('input[name=orientation]:checked').val();
+      console.log(tamany,orientation)
+      if(orientation=='vertical'){
+        $( ".view" ).css({'width':tamany[0],'height':tamany[1]})
+      }else{
+        $( ".view" ).css({'width':tamany[1],'height':tamany[0]})
+      }
+
+
+      $( "#viewSize,input[name=orientation]" ).change(function(){
+        var tamany = $(' #viewSize' ).val();
+        tamany = tamany.split('x');
+        var orientation = $('input[name=orientation]:checked').val();
+        // console.log()
+        if(orientation=='vertical'){
+          $( ".view" ).css({'width':tamany[0],'height':tamany[1]})
+        }else{
+          $( ".view" ).css({'width':tamany[1],'height':tamany[0]})
+        }
+      })
+    })
+    // jQuery( document ).ready(function( $ ) {
+    //   // Code using $ as usual goes here.
+    //   $('a').each(function(){
+    //     var url = "http://datanpress.github.io/arm/" + $(this).attr('href')
+    //     console.log(url)
+    //     var frame='<div style="position: relative;padding-bottom: 130%;padding-top: 25px; height: 0;"><iframe src="'+url+'" scrolling="no" frameborder="0" style="position: absolute;top: 0;  left: 0;width: 100%;height: 100%;"></iframe></div>'
+    //     console.log(frame);
+    //     $(this).after("<input type='text' name='fname' value='"+frame+"'>");
+    //   })
+    //   $("input[type='text']").click(function () {
+    //      $(this).select();
+    //   });
+    // });
+    </script>
+  </body>
+</html>

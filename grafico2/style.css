@@ -1,0 +1,130 @@
+*{
+  font-family:'Exo'
+}
+
+#popup{
+  background: #fff;
+  width:50vw;
+  font-size: 2.5vw;
+  display:none;
+  /*max-width:90%*/
+}
+#popup .fa{
+  font-size:2em;
+  /*font-size: 3vw;*/
+  color:#F39C1E;
+}
+#popup .fa:hover{
+  color:#008DAB;
+}
+#popup-screen{
+  background:#fff ;
+  opacity:.7
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+svg g#TEXTOS_EN{
+  display:none;
+}
+
+#hover{
+  cursor:pointer
+}
+
+
+/*dardo*/
+
+#dardo_txt_en{
+  display:none;
+}
+
+#dardo.animate{
+  animation: dardo 2s linear infinite;
+}
+#dardo_shadow.animate{
+  animation: dardo_shadow 2s linear infinite
+}
+
+@keyframes dardo {
+  0%{
+    transform: translate(162px,-137px);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+@keyframes dardo_shadow {
+  0%{
+    transform: translate(162px,0px);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+/*end dardo*/
+
+
+/*bacteriofago*/
+#bacterif{
+  transform-origin: 458px 290px;
+}
+#bacterif.animate{
+  animation: bacterio 2s ease-in-out infinite
+}
+@keyframes bacterio {
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(-5deg);}
+  50%{transform: rotate(0deg);}
+  75%{transform: rotate(5deg);}
+  0%{transform: rotate(0deg);}
+}
+
+/*end bacteriofago*/
+
+/*peix*/
+#peix{
+  transform-origin: 627px 459px;
+}
+#peix.animate{
+  animation: peix 4s linear infinite
+}
+
+@keyframes peix {
+  0%{
+    transform: translate(0,0);
+    /*transform: scaleX(1);*/
+  }
+  25%{
+    transform: translate(0,60px);
+    /*transform: scaleX(1);*/
+  }
+  50%{
+    transform: translate(-4px,70px) scaleX(-1);
+    /*transform: scaleX(1);*/
+  }
+  51%{
+    transform: translate(-4px,70px) scaleX(-1);
+    /*transform: ;*/
+  }
+  75%{
+    transform: translate(-4px,0px) scaleX(-1);
+  }
+  /*75&{
+    transform: translate(-4px,0px) scaleX(-1);
+  }*/
+  100%{
+    /*transform: scaleX(1);*/
+    transform: translate(0,0) scaleX(1);
+  }
+  /*0%{transform: translate(0,0);}
+  0%{transform: translate(0,0);}*/
+}
+
+/*END peix*/

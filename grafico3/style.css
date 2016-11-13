@@ -1,0 +1,221 @@
+*{
+  font-family:'Exo'
+}
+
+#popup{
+  background: #fff;
+  width:50vw;
+  font-size: 2.5vw;
+  display:none;
+  /*max-width:90%*/
+}
+#popup .fa{
+  font-size:2em;
+  /*font-size: 3vw;*/
+  color:#F39C1E;
+}
+#popup .fa:hover{
+  color:#008DAB;
+}
+#popup-screen{
+  background:#fff ;
+  opacity:.7
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:auto;
+}
+
+svg g#TEXTOS_EN{
+  display:none;
+}
+
+svg .hover{
+  cursor:pointer;
+}
+svg #infos{
+  display:none;
+}
+
+svg #infos{
+  font-family:'Exo';
+  font-size:12px;
+  font-weight:700;
+}
+svg #infos .tab{
+  opacity:0;
+}
+
+/*Microsopi*/
+#roda.animate{
+  animation: rodaroda 4s ease infinite;
+  transform-origin: 191px 77px;
+}
+#m_plaqueta.animate{
+  animation: micro_plaqueta 4s linear infinite;
+}
+@keyframes rodaroda {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform:rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform:rotate(0deg);
+  }
+}
+
+@keyframes micro_plaqueta {
+  0%{
+    transform: translate(0px,0px);
+  }
+  15%{
+    transform: translate(0px,0px);
+  }
+  50%{
+    transform: translate(-40px,0);
+  }
+  100%{
+    transform: translate(0px,0);
+  }
+}
+/*END microscopi*/
+
+
+/*placa de petri*/
+#cell_1.animate,
+#cell_2.animate,
+#cell_3.animate{
+  animation: cells 2s ease-in infinite;
+}
+#plaqueta_pal.animate{
+  animation: pal 2s ease-in infinite;
+}
+
+@keyframes cells{
+  from { fill: #FBE0B2; }
+	to { fill: #048EAB; }
+}
+@keyframes pal{
+  0% { transform:translate(0,0); }
+  50% { transform:translate(-5px,5px); }
+	100% { transform:translate(0,0); }
+}
+/*END placa de petri*/
+
+/*ma*/
+#molecu.animate{
+  animation: moleculares 2s linear infinite;
+}
+#ma.animate{
+  animation: move_ma 4s linear infinite;
+}
+@keyframes moleculares{
+  from { fill: #048EAB; }
+	to { fill: #FBE0B2; }
+}
+
+@keyframes move_ma{
+  0%{transform:translate(0,0);}
+  25%{transform:translate(-5px,-10px);}
+  50%{transform:translate(-12px,0);}
+  75%{transform:translate(-1px,-8px);}
+  100%{transform:translate(0,0);}
+
+}
+
+/*END ma*/
+
+/*celulas*/
+
+
+#estrella_1.animate{
+  transform-origin: 340px 99px;
+}
+#estrella_2.animate{
+  transform-origin: 360px 46px;
+}
+#estrella_1.animate,
+#estrella_2.animate{
+  animation: roda_estrella 4s linear infinite;
+}
+
+@keyframes roda_estrella{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(-23deg);}
+  50%{transform: rotate(0deg);}
+  75%{transform: rotate(23deg);}
+  100%{transform: rotate(0deg);}
+}
+
+
+/*END celulas*/
+
+#cuadre_1.animate{
+  animation: massas1 4s linear infinite;
+}
+#cuadre_2.animate{
+  animation: massas2 4s linear infinite;
+}
+
+#line_1.animate,#line_2.animate,
+#line_3.animate,#line_4.animate {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 500;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 475;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes massas2{
+  0%{
+    transform: translate(0px,0px);
+  }
+  25%{
+    transform: translate(-10px,0px);
+  }
+  50%{
+    transform: translate(-10px,-10px);
+  }
+  75%{
+    transform: translate(0px,-10px);
+  }
+  100%{
+    transform: translate(0px,0px);
+  }
+}
+@keyframes massas1{
+  0%{
+    transform: translate(0,0);
+  }
+  25%{
+    transform: translate(10px,0);
+  }
+  50%{
+    transform: translate(10px,10px);
+  }
+  75%{
+    transform: translate(0px,10px);
+  }
+  100%{
+    transform: translate(0px,0px);
+  }
+}
